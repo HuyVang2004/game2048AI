@@ -11,6 +11,9 @@
                 $p_i$ là xác suất xuất hiện trạng thái đó                       
                 $n$ là số vị trí trống
 
-### Đánh giá trị cho từng trạng thái
+### Đánh giá giá trị cho từng trạng thái
 - Cố gắng đẩy các số lớn về vị trị các góc. Có 8 đường đi để làm điều đó
-  ![Đườngdẫn]()
+  ![Đườngdẫn](https://github.com/HuyVang2004/game2048AI/blob/main/images/Screenshot%202023-12-02%20192514.png?raw=true)
+- Tính giá trị trạng thái cụ thể = giá trị lớn nhất của trạng thái đó trong 8 đường dẫn
+- Các tính tại mỗi đường dẫn $$evaluate = \sum_{i = 0}^{n - 1} value_i * 2 ^ i$$
+    trong đó $value_i$ là giá trị tại vị trí i trong đường dẫn
