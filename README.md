@@ -19,4 +19,4 @@
     trong đó $value_i$ là giá trị tại vị trí i trong đường dẫn
 
 ### Tài liệu tham khảo
-[](https://algomaths.tech/bot-2048-create-an-artificial-player/)
+[Bot2048](https://algomaths.tech/bot-2048-create-an-artificial-player/)
