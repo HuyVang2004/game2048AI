@@ -17,3 +17,6 @@
 - Tính giá trị trạng thái cụ thể = giá trị lớn nhất của trạng thái đó trong 8 đường dẫn
 - Các tính tại mỗi đường dẫn $$evaluate = \sum_{i = 0}^{n - 1} value_i * 2 ^ i$$
     trong đó $value_i$ là giá trị tại vị trí i trong đường dẫn
+
+### Tài liệu tham khảo
+[](https://algomaths.tech/bot-2048-create-an-artificial-player/)
