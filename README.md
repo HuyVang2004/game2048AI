@@ -4,9 +4,28 @@
   - Node MAX: Trả về giá trị max của các node con
   - Node MIN: Trả về giá trị min của các node con
   - Node CHANCE: Trả về giá trị trung bình tất cả các trường hợp có thể xảy ra
-        $$avg = \sum_{i = 1}^{n} value_i * p_i$$
+    $$avg = \sum_{i = 1}^{n} value_i * p_i$$
         Trong đó: $value_i$ là các giá trị có thể xảy ra với xác suất là $p_i$
-
+  - Mã giả:
+    function expectiminimax(node, depth)
+    if node is a terminal node or depth = 0
+        return the heuristic value of node
+    if node is node MIN
+        // Return value of minimum-valued child node
+        let α := +∞
+        foreach child of node
+            α := min(α, expectiminimax(child, depth-1))
+    else if node is node MAX
+        // Return value of maximum-valued child node
+        let α := -∞
+        foreach child of node
+            α := max(α, expectiminimax(child, depth-1))
+    else if node is node MIN
+        // Return weighted average of all child nodes' values
+        let α := 0
+        foreach child of node
+            α := α + (Probability[child] × expectiminimax(child, depth-1))
+    return α
       
 ### Áp dụng Expectiminimax cho 2048
 ![MinhHoa](https://algomaths.tech/wp-content/uploads/2020/12/expectimaximin.png)
