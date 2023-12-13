@@ -1,6 +1,7 @@
 # game2048AI
+### Thuật toán Expectiminimax
 
-### Thuật toán sử dụng Expectiminimax
+### Áp dụng Expectiminimax vào 2048
 ![MinhHoa](https://algomaths.tech/wp-content/uploads/2020/12/expectimaximin.png)
   - Tại mỗi trạng thái cụ thể duyệt hết tất cả các hướng đi của trạng thái đó (lên, xuống, trái, phải)
   - Nếu độ sâu tìm kiếm bằng 0 hoặc trạng thái đó là trạng thái kết thúc của trò chơi thì sẽ trả về giá trị của trạng thái đó (cần một hàm đánh giá giá trị của từng trạng thái)
