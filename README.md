@@ -7,7 +7,7 @@
     $$avg = \sum_{i = 1}^{n} value_i * p_i$$
         Trong đó: $value_i$ là các giá trị có thể xảy ra với xác suất là $p_i$
   - Mã giả:
-    function expectiminimax(node, depth) \\
+    function expectiminimax(node, depth)\\
     if node is a terminal node or depth = 0
         return the heuristic value of node
     if node is node MIN
