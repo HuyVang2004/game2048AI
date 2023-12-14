@@ -1,7 +1,33 @@
 # game2048AI
 ### Thuật toán Expectiminimax
-
-### Áp dụng Expectiminimax vào 2048
+![Expectiminimax](https://github.com/HuyVang2004/game2048AI/blob/main/images/expectiminimax.png)
+  - Node MAX: Trả về giá trị max của các node con
+  - Node MIN: Trả về giá trị min của các node con
+  - Node CHANCE: Trả về giá trị trung bình tất cả các trường hợp có thể xảy ra
+    $$avg = \sum_{i = 1}^{n} value_i * p_i$$
+        Trong đó: $value_i$ là các giá trị có thể xảy ra với xác suất là $p_i$
+  - **Mã giả**:  
+    **function** expectiminimax(node, depth):  
+      - **if** node is a terminal node or depth = 0  
+        return the heuristic value of node  
+      - **if** node is node MIN  
+          // Return value of minimum-valued child node  
+          let α := +∞  
+          foreach child of node  
+              α := min(α, expectiminimax(child, depth-1))  
+      - **else if** node is node MAX  
+          // Return value of maximum-valued child node  
+          let α := -∞  
+          foreach child of node  
+              -α := max(α, expectiminimax(child, depth-1))  
+      - **else if** node is node MIN  
+          // Return weighted average of all child nodes' values  
+          let α := 0  
+          foreach child of node  
+          α := α + (Probability[child] × expectiminimax(child, depth-1))  
+          return α  
+      
+### Áp dụng Expectiminimax cho 2048
 ![MinhHoa](https://algomaths.tech/wp-content/uploads/2020/12/expectimaximin.png)
   - Tại mỗi trạng thái cụ thể duyệt hết tất cả các hướng đi của trạng thái đó (lên, xuống, trái, phải)
   - Nếu độ sâu tìm kiếm bằng 0 hoặc trạng thái đó là trạng thái kết thúc của trò chơi thì sẽ trả về giá trị của trạng thái đó (cần một hàm đánh giá giá trị của từng trạng thái)
