@@ -45,5 +45,6 @@
 - Các tính tại mỗi đường dẫn $$evaluate = \sum_{i = 0}^{n - 1} value_i * 2 ^ i$$
     trong đó $value_i$ là giá trị tại vị trí i trong đường dẫn
 
+![example](https://github.com/HuyVang2004/game2048AI/blob/main/images/example_expectiminimax.png)
 ### Tài liệu tham khảo
 [Bot2048](https://algomaths.tech/bot-2048-create-an-artificial-player/)
