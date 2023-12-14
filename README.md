@@ -48,3 +48,4 @@
 ![example](https://github.com/HuyVang2004/game2048AI/blob/main/images/example_expectiminimax.png)
 ### Tài liệu tham khảo
 [Bot2048](https://algomaths.tech/bot-2048-create-an-artificial-player/)
+[www.baeldung.com](https://www.baeldung.com/cs/expectimax-search)
